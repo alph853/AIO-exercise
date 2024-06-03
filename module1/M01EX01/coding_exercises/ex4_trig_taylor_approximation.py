@@ -1,7 +1,7 @@
 factorial_list = [1]
 
 
-def check_input(n):
+def check_input_n_sample(n):
     return isinstance(n, int) and n > 0
 
 
@@ -17,7 +17,7 @@ def factorial(n):
 
 
 def approx_sin(x, n):
-    if not check_input(n):
+    if not check_input_n_sample(n):
         print('n must be an integer and greater than 0')
         return
 
@@ -26,10 +26,12 @@ def approx_sin(x, n):
         temp = 2*i + 1
         sin += (-1)**i * x**(temp) / factorial(temp)
     print(sin)
+    
+    return sin
 
 
 def approx_cos(x, n):
-    if not check_input(n):
+    if not check_input_n_sample(n):
         print('n must be an integer and greater than 0')
         return
 
@@ -38,10 +40,12 @@ def approx_cos(x, n):
         temp = 2*i
         cos += (-1)**i * x**(temp) / factorial(temp)
     print(cos)
+    
+    return cos
 
 
 def approx_sinh(x, n):
-    if not check_input(n):
+    if not check_input_n_sample(n):
         print('n must be an integer and greater than 0')
         return
 
@@ -50,10 +54,12 @@ def approx_sinh(x, n):
         temp = 2*i + 1
         sinh += x**(temp) / factorial(temp)
     print(sinh)
+    
+    return sinh
 
 
 def approx_cosh(x, n):
-    if not check_input(n):
+    if not check_input_n_sample(n):
         print('n must be an integer and greater than 0')
         return
 
@@ -62,4 +68,5 @@ def approx_cosh(x, n):
         temp = 2*i
         cosh += x**(temp) / factorial(temp)
     print(cosh)
-
+    
+    return cosh

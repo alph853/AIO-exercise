@@ -1,4 +1,4 @@
-def check_input(tp, fp, fn):
+def check_input_f1_score(tp, fp, fn):
     flag = True
     var_name = {'tp': tp, 'fp': fp, 'fn': fn}
 
@@ -16,13 +16,13 @@ def check_input(tp, fp, fn):
                 print(f"{key} must be greater than 0")
             flag = False
         elif not string_flag:
-            print('')   
+            print('')
         
     return flag
 
 
 def f1_score(tp, fp, fn):
-    if not check_input(tp, fp, fn):
+    if not check_input_f1_score(tp, fp, fn):
         return
     
     precision = tp / (tp + fp)
@@ -33,6 +33,8 @@ def f1_score(tp, fp, fn):
     print(f"{'Recall':<{10}}: {recall}")
     print(f"{'F1 Score':<{10}}: {f1_score}")
     
+    return f1_score
+    
     
 def exercise1(tp, fp, fn):
-    f1_score(tp, fp, fn)
+    return f1_score(tp, fp, fn)

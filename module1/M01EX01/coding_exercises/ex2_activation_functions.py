@@ -30,15 +30,17 @@ def activation_functions():
         return
     
     func_name = input('Input activation function: (sigmoid | relu | elu) : ')
-    functions = {'sigmoid': sigmoid, 'relu': relu, 'elu': elu} 
+    functions = {'sigmoid': sigmoid, 'relu': relu, 'elu': elu}
+    func_name_keys = func_name.lower()
     
-    if func_name not in functions.keys():
+    if func_name_keys not in functions.keys():
         print(f'{func_name} is not supported')
         return
     
-    res = functions[func_name](float(x))
-    
+    res = functions[func_name_keys](float(x))
     print(f'{func_name}({x}) = {res}')
+    
+    return res
     
     
 def exercise2():

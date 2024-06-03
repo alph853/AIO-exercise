@@ -1,2 +1,1 @@
-from ex import *
-
+from coding_exercises import *
